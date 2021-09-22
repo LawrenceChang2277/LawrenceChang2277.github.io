@@ -4861,7 +4861,7 @@ input, select, textarea {
 	}
 
 		.spotlight.style1 .content {
-			padding: 7rem 7rem 5rem 7rem ;
+			padding: 7rem 7rem 5rem 7rem;
 			-moz-align-self: center;
 			-webkit-align-self: center;
 			-ms-align-self: center;
@@ -4878,6 +4878,45 @@ input, select, textarea {
 			max-width: 64rem;
 			margin: 0 auto;
 		}
+
+		.spotlight.style1 .large_content {
+			padding: 9.5em 5rem 9.5rem 5rem !important;
+			-moz-align-self: center;
+			-webkit-align-self: center;
+			-ms-align-self: center;
+			align-self: center;
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-ms-flex-grow: 1;
+			flex-grow: 1;
+			-moz-flex-shrink: 1;
+			-webkit-flex-shrink: 1;
+			-ms-flex-shrink: 1;
+			flex-shrink: 1;
+			width: 50%;
+			max-width: 64rem;
+			margin: 0 auto;
+		}
+
+		.spotlight.style1 .extra_large_content {
+			padding: 12rem 5rem 12rem 5rem !important;
+			-moz-align-self: center;
+			-webkit-align-self: center;
+			-ms-align-self: center;
+			align-self: center;
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-ms-flex-grow: 1;
+			flex-grow: 1;
+			-moz-flex-shrink: 1;
+			-webkit-flex-shrink: 1;
+			-ms-flex-shrink: 1;
+			flex-shrink: 1;
+			width: 50%;
+			max-width: 64rem;
+			margin: 0 auto;
+		}
+
 
 		.spotlight.style1 .image {
 			-moz-flex-grow: 0;
@@ -4910,38 +4949,6 @@ input, select, textarea {
 				height: 100%;
 				border-radius: 0;
 			}
-
-	/* .spotlight.style1 .big_image {
-		-moz-flex-grow: 0;
-		-webkit-flex-grow: 0;
-		-ms-flex-grow: 0;
-		flex-grow: 0;
-		-moz-flex-shrink: 0;
-		-webkit-flex-shrink: 0;
-		-ms-flex-shrink: 0;
-		flex-shrink: 0;
-		width: 50%;
-		min-width: 25rem;
-		border-radius: 0;
-	}
-			.spotlight.style1 .big_image img {
-				-moz-object-fit: cover;
-				-webkit-object-fit: cover;
-				-ms-object-fit: cover;
-				object-fit: cover;
-				-moz-object-position: center;
-				-webkit-object-position: center;
-				-ms-object-position: center;
-				object-position: center;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 50%;
-				height: 100%;
-				border-radius: 0;
-			} */
-
 
 		@media screen and (max-width: 1680px) {
 
