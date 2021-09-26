@@ -16,7 +16,7 @@
 				<section class="banner style2 orient-center content-align-left image-position-center onload-image-fade-in onload-content-fade-right">
 					<div class="content">
 						<h1>Filament Extruder</h1>
-						<p class="major">3D printing can result in a lot of waste from supports and other artifacts and tons of iterations and failed prints. To save on printing costs, I decided to make a plastic filament extruder which melts plastic into usable 3D printer filament.</p>
+						<p class="major">3D printing can result in a lot of waste plastic from supports, failed prints, and iterations on parts. To save on printing costs, I decided to make a plastic filament extruder which melts plastic into usable 3D printer filament.</p>
 					</div>
 					<div>
 						<iframe width="1000" height="700" src="https://www.youtube.com/embed/FV3bJk5IvG8?autoplay=1&mute=1&control=0&loop=1"></iframe>
@@ -25,7 +25,7 @@
 
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="large_content">
-							<p>This project uses OTS PID temp controller module, SSR, and thermocouple to regulate temperature of the hot end, which is composed of a steel pipe and brass end cap.</p>
+							<p>This project uses OTS PID temp controller module, SSR, and thermocouple to regulate temperature of the hot end.</p>
 						</div>
 						<div class="image">
 							<img src="../images/filament_extruder/filament_extruder_electronics.png" alt="" />
@@ -34,7 +34,7 @@
 
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="large_content">
-							<p>The motor drives an auger which turns in the steel pipe and pushes the plastic forward. Turning the auger through sticky molten plastic takes a fair amount of torque so I used a brushed DC motor with an 80:1 planetary gearbox stack.</p>
+							<p>The hot end is composed of a steel pipe and brass end cap. The motor drives an auger within the steel pipe which pushes the plastic forward. Turning the auger through sticky molten plastic takes a fair amount of torque so I used a brushed DC motor with an 80:1 planetary gearbox stack.</p>
 						</div>
 						<div class="image">
 							<img src="../images/filament_extruder/filament_extruder_auger.jpg" alt="" />
@@ -43,7 +43,7 @@
 
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="large_content">
-							<p>The tricky thing about making usable 3D printer filament is that the diameter needs to be controlled. This means you need to apply the right amount of tension at the hot end and cool the filament down immediately to keep the filament the right diameter. The cooling apparatus is composed of two DC fans with a polycarbonate heat shield to prevent the fans from cooling down the hot end.</p>
+							<p>The tricky thing about making usable 3D printer filament is that the diameter needs to be consistent. This means I had to apply the right amount of tension at the hot end and cool the filament down immediately to keep the filament the right diameter. The cooling apparatus is composed of two DC fans with a polycarbonate heat shield to prevent the fans from cooling down the hot end.</p>
 						</div>
 						<div class="image">
 							<img src="../images/filament_extruder/filament_extruder_fans.jpg" alt="" />
@@ -52,9 +52,10 @@
 
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
+							<h2>Results</h2>
 							<p>Plastic mulch is hydrophilic and must be dry before extruding. This is because excessive moisture leads to steam bubbles and ruins the consistency of the filament.</p>
 							<p>Another issue was contamination of the mulch since small impurities can clog a 3D printer.</p>
-							<p>After a lot of tuning, I ended up only producing one roll of filament from red ABS plastic mulch but I quickly realized there were too many contaminants and the filament kept clogging of the 3D printer. This can be solved with more attention to contaminants when handling the plastic or using a larger printing nozzle for lower quality prints.</p>
+							<p>After a lot of tuning, I ended up only producing one roll of filament from red ABS plastic mulch but I quickly realized there were too many contaminants and the filament kept clogging up the 3D printer. This issue can be solved with more attention to contaminants when handling the plastic or using a larger printing nozzle for lower quality prints.</p>
 						</div>
 						<div class="image">
 							<img src="../images/filament_extruder/filament_extruder_finished_filament.jpg" alt="" />
