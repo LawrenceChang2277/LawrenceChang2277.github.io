@@ -17,12 +17,41 @@
 					<div class="content">
 						<h1>Semi-Auto Eboard</h1>
 						<p>April 2021 - Present</p>
-						<p class="major">It was an unusually hot, humid spring day. I was walking to class carrying my heavy backpack over my sweat drenched back when I thought of a way I could both carry my stuff and get to class quicker. My idea was to make an electric longboard with a person-following mode: a semi-autonomous longboard. When I am not riding, it could follow me around carrying my stuff. This project piqued my interest because of its mechanical and software duality — a perfect way for me to develop my experience with robotic systems. At the time of writing, this project is not yet done but is considerably far along since most of the theoretical design has been completed.</p>
+						<p class="major">It was an unusually hot, humid spring day. I was trudging home after a long day of lectures when I thought of an interesting solution to my last-mile transportation predicament. What if I had an electric skateboard that could also carry my stuff?</p>
+						<p class="major">My idea was to make an electric longboard with a person-following mode: a semi-autonomous longboard. This way I would not have to carry it and it could also carry my stuff. This project piqued my interest because of its mechanical and software duality. At the time of writing, I have simulated, designed, and manufactured all mechanical components of the Semi-Auto Eboard. I am currently implementing the tracking feature using ultra-wide band ranging.</p>
 					</div>
 					<div class="image">
-						<img src="../images/semi_auto_eboard/semi_auto_eboard_cad.png" alt=""/>
+						<img src="../images/semi_auto_eboard/control_electronics.jpg" alt=""/>
 					</div>
 				</section>
+
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Mechanical Challenges</h2>
+							<p>Making a longboard robotically steerable proved more challenging than expected. I needed a mechanism that could both robotically steer the longboard, but also robust enough for me to ride the longboard normally.</p>
+						</div>
+						<div class="image">
+							<img src="../images/semi_auto_eboard/asethetic_module.jpg" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<p>My solution was to put the entire truck on a rotating turret with a clutch to lock it in place. Designing the module to be compact and able withstand the dynamic loads of riding, leaning, and going over bumps at high speeds was very challenging.</p>
+						</div>
+						<div class="image">
+							<img src="../images/semi_auto_eboard/semi_auto_eboard_tube.png" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<p>From personal experience, I decided that riding over a large crack in the road would be my worst case impact scenario. To calculate the impact loads, I wrote a lagrangian mechanics python simulation from scratch. To double check, I also made a simulation using the dynamics simulator ADAMS to simulate a simplified model of the board going over a bump.</p>
+						</div>
+						<div class="image">
+							<img src="../images/semi_auto_eboard/semi_auto_eboard_adams.png" alt="" />
+						</div>
+					</section>
 
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
@@ -36,16 +65,18 @@
 
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<p>The center shaft has a welded boss which interfaces with a 3D printed pulley that steers and rotates the whole shaft. Since there are so many features required of this center shaft, designing all the welded parts to be manufacturable and weldable was challenging and involved strategically placed chamfers and undercuts.</p>
+							<p>The most challenging part of this design was coming up with a mechanism that could lock the steering module from turning when I want to ride the board normally and unlock when I want it to follow me around. After exploring many different locking mechanisms, I decided to create my own simple pin and hole clutch.</p>
 						</div>
 						<div class="image">
-							<img src="../images/semi_auto_eboard/semi_auto_eboard_tube.png" alt="" />
+							<img src="../images/semi_auto_eboard/clutch_up_down.png" alt="" />
 						</div>
 					</section>
-
+					
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<p>The most challenging part of this design was coming up with a mechanism that could lock the steering module from turning when I want to ride the board normally and unlock when I want it to follow me around. Backlash in the locking mechanism also needed to be mitigated since that would make it unstable to ride. After exploring many different locking mechanisms, I decided to create my own simple pin and hole clutch. The steering module will have a tapered hole and the clutch plate would have a matching tapered pin that would fit into the hole. The taper is to prevent backlash.</p>
+							<p></p>
+							<p>The head tube has a locking arm with a tapered hole. The clutch plate has a corresponding tapered pin that mates with the tapered hole. Since the clutch plate is always spring loaded to compress into the hole, most of the backlash from the pin and hole interface is eliminated.</p>
+							<p></p>
 						</div>
 						<div class="image">
 							<img src="../images/semi_auto_eboard/semi_auto_eboard_clutch.png" alt="" />
@@ -54,34 +85,50 @@
 
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>Mechanical Challenges</h2>
-							<p>Making a longboard robotically steerable proved more challenging than intuitively expected. Since the longboard must also autonomously carry a payload, I could not make the entire board lean to steer. Instead I decided to put the entire powertrain on a rotating turret. Now the challenge was making this module as compact as possible while still being able to withstand the dynamic loads of riding, leaning, and going over bumps at high speeds.</p>
-						</div>
-						<!-- <div class="image">
-							<img src="../images/semi_auto_eboard/semi_auto_eboard_adams.png" alt="" />
-						</div> -->
-					</section>
-
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<p> These requirements meant a lot of hand calculations to spec bearings, shafts, and pins. To calculate the impact force on the module while going over a bump, I used Matlab to solve a spring damper system I modeled after the board. To double check, I also used the dynamics simulator ADAMS to simulate a simplified model of the board going over a bump.</p>
-							<p>At the time of writing this, the steering module is nearing the end of its first design cycle and I am preparing to manufacture the parts.</p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p>A servo arm pulls on two cables which pulls the clutch plate upwards. The cables are routed through two black cable housings in the top.</p>
+							<p>The steering motor is a 90-deg drive motor with a built-in encoder. It is coupled to the center shaft using timing belts and pulleys.</p>
+							<p></p>
+							<p></p>
+							<p></p>
 						</div>
 						<div class="image">
-							<img src="../images/semi_auto_eboard/semi_auto_eboard_adams.png" alt="" />
+							<img src="../images/semi_auto_eboard/motors_annotated.png" alt="" />
 						</div>
 					</section>
 
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="large_content">
-							<h2>Software Challenges</h2>
-							<p>For my tracking requirements, I wanted the board to be able to work indoors and outdoors, follow me through tight turns, and keep close to me if I was walking through crowded areas. Through my research, I was immediately daunted by how difficult it would be to make a robust computer vision system that could track me through multiple environments and be able to recover from interruptions in case I was blocked from view. It was just going to be too laborious.</p>
-							<p>The next best option for me was to have my board follow some sort of a beacon using GPS, W-Fi, or Bluetooth but these signal technologies are all too coarse for precise distance measurements. Around this time, Apple had just released AirTags which is an indoor tracking beacon and it worked exactly how I imagined my longboard would work — real time, precise positioning down to a few centimeters.</p>
-							<p>I found out that AirTags use ultra wideband which, unlike Bluetooth or Wi-Fi, relies on time of flight instead of signal strength to calculate distance between transmitter and receiver. The only issue is that the technology is not as widespread and thus more expensive to implement. At the time of writing I have specced the ultra wideband transceiver but the rest of the software and controls for this project are still being researched.</p>
+							<h2>Controls (ongoing)</h2>
+							<p>I want the board to follow me me indoors and outdoors, through tight turns, and through crowded areas. To do this, I decided to go with beacon tracking with ultra-wide band ranging modules because of their robustness in multiple environments, high precision, and relative simplicity.</p>
+							<p>Thus far, I have successfully implemented a “remote control” mode for my longboard. I designed a custom remote with a two-pot joystick where a long press can toggle between “riding mode” and “RC mode”. When in “RC mode” the servo lifts the clutch plate and a position feedback loop is used to turn the steering motor.</p>
+							<p>At the time of writing, I have started experimenting with ultra-wide band modules and have begun implementing the tracking features.</p>
 						</div>
 						<!-- <div class="image">
-							<img src="../images/semi_auto_eboard/semi_auto_eboard_module_clutch.png" alt="" />
+							<img src="../images/semi_auto_eboard/eboard_battery.jpg" alt="" />
 						</div> -->
+					</section>
+
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="large_content">
+							<h2>Electronics</h2>
+							<p>For this project I built my own 12s2p 18650 battery pack from scratch. I chose to make my own pack because it was hard to find a battery with a flat profile that still had a large enough capacity for my liking. The pack is spot welded using nick strips and has an off-the-shelf BMS.</p>
+						</div>
+						<div class="image">
+							<img src="../images/semi_auto_eboard/eboard_battery.jpg" alt="" />
+						</div>
+					</section>
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="large_content">
+							<p>I am using a Dual Fesc 6.6 Mini. This is based on the open-source VESC designs which has built-in encoder support and data logging. 
+							<p>To control the steering motor, I am using a cheap L298N motor driver.</p>
+							<p>For my microcontroller, I am using an ESP32 Feather. The ESP32 Feather has multiple ADC channels, multiple PWM channels, and eight timers. This made it possible to drive servos, run feedback loops, and manage encoder inputs simultaneously.</p>
+						</div>
+						<div class="image">
+							<img src="../images/semi_auto_eboard/control_electronics.jpg" alt="" />
+						</div>
 					</section>
 
 				<!-- Footer -->
